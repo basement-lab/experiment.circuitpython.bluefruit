@@ -1,6 +1,7 @@
 # experiment.circuitpython.bluefruit
 
 - [Adafruit Circuit Playground Bluefruit](https://learn.adafruit.com/adafruit-circuit-playground-bluefruit?view=all)
+- [CircuitPython Made Easy](https://learn.adafruit.com/circuitpython-made-easy-on-circuit-playground-express?view=all)
 
 ## Include Libraries
 
