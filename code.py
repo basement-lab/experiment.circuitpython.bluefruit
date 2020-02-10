@@ -1,13 +1,19 @@
+# Circuit Playground digitalio example
+
+import time
 import board
 import digitalio
-import time
 
 led = digitalio.DigitalInOut(board.D13)
-led.direction = digitalio.Direction.OUTPUT
+led.switch_to_output()
+
+button = digitalio.DigitalInOut(board.BUTTON_A)
+button.switch_to_input(pull=digitalio.Pull.DOWN)
 
 while True:
-    print("Hello, CircuitPython!")
-    led.value = True
-    time.sleep(0.25)
-    led.value = False
-    time.sleep(0.25)
+    if button.value:  # button is pushed
+        led.value = True
+    else:
+        led.value = False
+
+    time.sleep(0.01)
